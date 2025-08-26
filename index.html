@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitZone - Modern Fitness</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Libraries -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">FitZone</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">FitZone</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#programs" class="nav-link">Programs</a></li>
+                <li><a href="#membership" class="nav-link">Membership</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button class="nav-cta" onclick="scrollToSection('membership')">Join Now</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div id="particles-js"></div>
+        
+        <!-- Floating Cards -->
+        <div class="floating-card floating-card-1">
+            <div style="font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem;">💪</div>
+            <div style="font-weight: 600;">24/7 Access</div>
+        </div>
+        
+        <div class="floating-card floating-card-2">
+            <div style="font-size: 2rem; color: var(--accent); margin-bottom: 0.5rem;">🏆</div>
+            <div style="font-weight: 600;">Expert Trainers</div>
+        </div>
+        
+        <div class="floating-card floating-card-3">
+            <div style="font-size: 2rem; color: var(--secondary); margin-bottom: 0.5rem;">⚡</div>
+            <div style="font-weight: 600;">Modern Equipment</div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">🚀 Next Generation Fitness</div>
+            <h1 class="hero-title">Transform Your Body<br>Elevate Your Mind</h1>
+            <p class="hero-subtitle">Experience the future of fitness with cutting-edge technology, personalized training programs, and a community that pushes you beyond your limits.</p>
+            
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('membership')">
+                    Start Your Journey
+                </button>
+                <button class="btn-secondary" onclick="scrollToSection('programs')">
+                    Explore Programs
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number" data-target="5000">0</span>
+                <span class="stat-label">Active Members</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="15">0</span>
+                <span class="stat-label">Expert Trainers</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="50">0</span>
+                <span class="stat-label">Programs</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="98">0</span>
+                <span class="stat-label">Success Rate</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="section">
+        <div class="section-header">
+            <div class="section-badge">💎 Premium Programs</div>
+            <h2 class="section-title">Unlock Your Potential</h2>
+            <p class="section-subtitle">Discover our comprehensive range of fitness programs designed to push your boundaries and achieve extraordinary results.</p>
+        </div>
+        
+        <div class="programs-grid">
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h3 class="program-title">Strength Training</h3>
+                <p class="program-desc">Build explosive strength and muscle mass with our scientifically-backed training protocols and state-of-the-art equipment.</p>
+                <ul class="program-features">
+                    <li>Progressive overload methodology</li>
+                    <li>Compound movement mastery</li>
+                    <li>Personalized rep schemes</li>
+                    <li>Advanced form coaching</li>
+                </ul>
+            </div>
+            
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="program-title">HIIT Training</h3>
+                <p class="program-desc">Maximize fat burn and cardiovascular fitness through high-intensity interval training that delivers results in minimal time.</p>
+                <ul class="program-features">
+                    <li>Metabolic conditioning</li>
+                    <li>Fat-burning optimization</li>
+                    <li>Endurance building</li>
+                    <li>Time-efficient workouts</li>
+                </ul>
+            </div>
+            
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="program-title">Mind-Body</h3>
+                <p class="program-desc">Achieve perfect balance between physical strength and mental clarity through yoga, meditation, and mobility work.</p>
+                <ul class="program-features">
+                    <li>Flexibility enhancement</li>
+                    <li>Stress reduction techniques</li>
+                    <li>Mindfulness training</li>
+                    <li>Recovery optimization</li>
+                </ul>
+            </div>
+            
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-fist-raised"></i>
+                </div>
+                <h3 class="program-title">Combat Sports</h3>
+                <p class="program-desc">Master the art of combat through boxing, MMA, and specialized arm wrestling training for all skill levels.</p>
+                <ul class="program-features">
+                    <li>Technical skill development</li>
+                    <li>Combat conditioning</li>
+                    <li>Mental toughness training</li>
+                    <li>Competition preparation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section id="membership" class="section membership">
+        <div class="section-header">
+            <div class="section-badge">⚡ Membership Plans</div>
+            <h2 class="section-title">Choose Your Path</h2>
+            <p class="section-subtitle">Select the membership that aligns with your fitness goals and unlock access to premium facilities and expert guidance.</p>
+        </div>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3 class="plan-name">Starter</h3>
+                <p class="plan-desc">Perfect for beginners starting their fitness journey</p>
+                <div class="plan-price">
+                    <span class="price-currency">Rp</span>
+                    <span class="price-amount">299</span>
+                    <span class="price-period">K/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li>24/7 gym access</li>
+                    <li>Basic equipment usage</li>
+                    <li>Locker room facilities</li>
+                    <li>Mobile app access</li>
+                    <li>Community support</li>
+                </ul>
+                <button class="plan-button">Choose Starter</button>
+            </div>
+            
+            <div class="pricing-card featured">
+                <h3 class="plan-name">Pro</h3>
+                <p class="plan-desc">Advanced features for serious fitness enthusiasts</p>
+                <div class="plan-price">
+                    <span class="price-currency">Rp</span>
+                    <span class="price-amount">599</span>
+                    <span class="price-period">K/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li>All Starter features</li>
+                    <li>Group fitness classes</li>
+                    <li>Personal trainer sessions</li>
+                    <li>Nutrition consultation</li>
+                    <li>Recovery zone access</li>
+                    <li>Guest passes (2/month)</li>
+                </ul>
+                <button class="plan-button">Choose Pro</button>
+            </div>
+            
+            <div class="pricing-card">
+                <h3 class="plan-name">Elite</h3>
+                <p class="plan-desc">Ultimate experience with premium benefits</p>
+                <div class="plan-price">
+                    <span class="price-currency">Rp</span>
+                    <span class="price-amount">999</span>
+                    <span class="price-period">K/month</span>
+                </div>
+                <ul class="plan-features">
+                    <li>All Pro features</li>
+                    <li>1-on-1 training sessions</li>
+                    <li>Custom meal planning</li>
+                    <li>Spa & recovery services</li>
+                    <li>Priority class booking</li>
+                    <li>Unlimited guest passes</li>
+                    <li>VIP lounge access</li>
+                </ul>
+                <button class="plan-button">Choose Elite</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="section-header">
+            <div class="section-badge">🤝 Get Connected</div>
+            <h2 class="section-title">Ready to Start?</h2>
+            <p class="section-subtitle">Get in touch with our team and take the first step towards transforming your fitness journey.</p>
+        </div>
+        
+        <div class="contact-grid">
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell us about your fitness goals..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Visit Our Facility</h4>
+                        <p>Jl. Fitness Center No. 123<br>Gresik, East Java, Indonesia</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Call Us</h4>
+                        <p><a href="tel:+6281234567890">+62 812-3456-7890</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Email</h4>
+                        <p><a href="mailto:info@fitzone.com">info@fitzone.com</a></p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-text">
+                        <h4>Operating Hours</h4>
+                        <p>Mon-Sat: 05:00 - 22:00<br>Sunday: 07:00 - 20:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">FitZone</div>
+            
+            <div class="social-links">
+                <a href="https://instagram.com/fitzone_gym" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/6281234567890" target="_blank" class="social-link">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://facebook.com/fitzone.gym" target="_blank" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://youtube.com/fitzonegym" target="_blank" class="social-link">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            
+            <p class="footer-text">&copy; 2025 FitZone. All rights reserved. Transform your limits.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="particles-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
